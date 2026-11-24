@@ -1,0 +1,4 @@
+__pycache__/
+*.npy
+*_mkr.mat
+.DS_Store

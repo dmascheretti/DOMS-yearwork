@@ -1,0 +1,12 @@
+@page { size: A4; margin: 18mm 16mm; }
+body { font-family: "DejaVu Serif", Georgia, serif; font-size: 10.5pt; line-height: 1.45; color:#111; max-width: none; }
+h1 { font-size: 20pt; border-bottom: 2px solid #234; padding-bottom: 4px; }
+h2 { font-size: 15pt; color:#123a6b; border-bottom: 1px solid #9ab; margin-top: 1.6em; page-break-before: always; }
+h3 { font-size: 12pt; color:#1d4f8a; margin-top: 1.2em; }
+table { border-collapse: collapse; width: 100%; margin: .6em 0; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #aab; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #e8eef6; }
+math[display="block"] { margin: .7em 0; font-size: 1.08em; overflow-x: auto; }
+ul.task-list { list-style: none; padding-left: 1em; }
+li { margin: .15em 0; }
+p, li { orphans: 3; widows: 3; }
