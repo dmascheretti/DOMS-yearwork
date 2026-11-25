@@ -17,7 +17,7 @@ software `dmb_fem2` (MATLAB).
 
 | Task | Status |
 | --- | --- |
-| 1. FE model valid in 0–16 Hz (safety factor 1.5) | Draft `model/tower.inp` — geometry of peaks and cross-arms to be checked against the figure |
+| 1. FE model valid in 0–16 Hz (safety factor 1.5) | Draft `model/tower.inp` — bottom-bay diagonals added (4–9, 15–20); peaks and cross-arms still to be checked |
 | 2. Natural frequencies and modes in 0–16 Hz | Preview computed (see below); to confirm in dmb_fem2 |
 | 3. FRFs a)–e) | To do (dmb_fem2 Frequency response menu) |
 | 4. FRFs of constraint forces f), g) | To do (script on exported `_mkr.mat`) |
@@ -30,12 +30,12 @@ software `dmb_fem2` (MATLAB).
 - Origin on the tower axis at ground level; units m, kg, N.
 - Maximum element length from the quasi-static criterion Ω_max = 2π·16·1.5 rad/s:
   red (IPE300) 6.47 m, green (IPE140) 4.39 m, blue 5.27 m.
-- 39 nodes, 60 beam elements, 117 d.o.f., total mass ≈ 7767 kg. O1 and O2 clamped.
+- 39 nodes, 62 beam elements, 117 d.o.f., total mass ≈ 8311 kg. O1 and O2 clamped.
 - Key nodes: **A = 21**, **D = 10**, **B = 26**, **C = 25**, **O1 = 1**, **O2 = 2**.
 - Rayleigh damping fitted by least squares on h1, h2, h3:
-  α = 1.638·10⁻³ s⁻¹, β = 1.534·10⁻⁴ s.
-- Preview natural frequencies (Python, consistent mass): 6.15, 11.29, 11.52, 12.53, 15.16, 15.72, 15.90 Hz
-  → 7 modes below 16 Hz. Small differences from dmb_fem2 are expected.
+  α = 4.101·10⁻² s⁻¹, β = 1.294·10⁻⁴ s.
+- Preview natural frequencies (Python, consistent mass): 6.16, 11.28, 14.41, 15.70, 15.89 Hz
+  → 5 modes below 16 Hz. Small differences from dmb_fem2 are expected.
 
 Regenerate the model (needs Python with numpy, scipy, matplotlib):
 

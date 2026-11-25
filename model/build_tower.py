@@ -52,6 +52,7 @@ for s in ("L", "R"):
     M += [(f"leg{s}{a}", f"leg{s}{b}", "R") for a, b in zip(hs, hs[1:])]   # legs
     M += [(f"leg{s}0", f"inner{s}6", "R"), (f"inner{s}6", "C", "R")]       # bottom bay inner members
     M += [(f"leg{s}6", f"inner{s}6", "G")]                                 # short green horizontal
+    M += [(f"leg{s}12", f"inner{s}6", "R")]                                # red diagonal leg(12 m) -> inner(6 m)
     M += [("C", f"leg{s}18", "G"), (f"leg{s}18", "B", "G")]                # lower diamond
     M += [("B", f"leg{s}30", "G"), (f"leg{s}30", "top", "G")]              # upper diamond
     M += [(f"leg{s}30", f"postB{s}", "B"), (f"postB{s}", f"tip{s}", "B")]  # cross-arm lower chord
